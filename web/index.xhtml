@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<ui:composition
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    template="WEB-INF/layout.xhtml">
+
+    <ui:define name="content">
+        <h:form>
+            <div class="espace-bottom-lg">
+                <h2>Catégories <small><h:commandLink action="#{controller.doCreateCategory}" title="Ajouter une catégorie" class="tip-right"><span class="glyphicon glyphicon-plus-sign"></span></h:commandLink></small></h2>
+            </div>
+        </h:form>
+        <h:form>
+            <ui:repeat value="#{controller.categories}" var="category">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title pull-left"><span class="glyphicon glyphicon-folder-open espace-right-sm"></span><h:outputText value="#{category.name}" /></h3>
+                        <h:commandLink action="#{controller.doCreateNote(category.id)}" class="pull-right">Ajouter une note</h:commandLink>
+                    </div>
+                    <ul class="list-group">
+                        <ui:repeat value="#{category.notes}" var="note">
+                            <li class="list-group-item"><h:commandLink action="#{controller.doShowNote(note.id)}" class="list-group-item-text"><h:outputText value="#{note.title}" /></h:commandLink></li>
+                        </ui:repeat>    
+                    </ul>
+                </div>
+            </ui:repeat>
+        </h:form>
+    </ui:define>
+
+</ui:composition>

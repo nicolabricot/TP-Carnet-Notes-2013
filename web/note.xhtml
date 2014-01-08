@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="WEB-INF/layout.xhtml">
+
+    <ui:define name="title">#{controller.note.title}</ui:define>
+
+    <ui:define name="content">
+        <ol class="breadcrumb">
+            <li><a href="/Carnet-Notes"><span class="glyphicon glyphicon-home"></span> Accueil</a></li>
+            <li class="active">Lire une note</li>
+        </ol>
+
+        <div class="page-header">
+            <h2>#{controller.note.title}</h2>
+        </div>
+
+        <div>#{controller.note.content}</div>
+    </ui:define>
+
+</ui:composition>

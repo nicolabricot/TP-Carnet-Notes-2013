@@ -1,0 +1,20 @@
+/* 
+    Document   : notebook
+    Created on : 6 janv. 2014, 17:45:40
+    Author     : Nicolas
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.espace-top { margin-top: 20px; }
+.espace-right-sm { margin-right: 10px; }
+.espace-bottom-lg { margin-bottom: 40px; }
+
+.navbar-inverse a.navbar-brand { color: #cdcdcd; }
+.page-header { margin-top: 0;  }
+.panel-heading { overflow: hidden; }
+
+.list-group-item-text {
+    padding-left: 20px;
+    background: url('../img/notebook_16x16.png') left center no-repeat;
+}
