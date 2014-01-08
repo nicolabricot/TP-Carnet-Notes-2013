@@ -1,9 +1,9 @@
 #TP-Carnet-Notes-2013
 
-Source code of Java Web Application with JSF 
-
 ![Home of Carnet-Notes](notebook.png)
 
+
+Authors:
 * Nicolas Devenet
 * Valériane Jean
 
